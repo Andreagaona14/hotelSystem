@@ -14,7 +14,7 @@ class hotelSystemImpl implements hotelSystem {
         return reservation;
     }
 
-    getSortReservations(): Reservation[] { // Asegúrate de que el nombre del método esté correcto
+    getSortReservations(): Reservation[] { 
         return [...this.reservations].sort((a, b) => new Date(a.checkIn).getTime() - new Date(b.checkIn).getTime());
     }
 
